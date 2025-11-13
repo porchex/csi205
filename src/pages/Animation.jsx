@@ -110,16 +110,6 @@ export default function App() {
 
   return (
     <div className="anim-container text-center">
-      <img
-        src={logo}
-        alt="Logo"
-        style={{
-          width: "120px",
-          marginBottom: "1rem",
-          borderRadius: "12px",
-          boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
-        }}
-      />
 
       <div id="field" className="anim-field mx-auto" style={fieldStyle}>
         <div id="ball" className="anim-ball" style={ballStyle} />
