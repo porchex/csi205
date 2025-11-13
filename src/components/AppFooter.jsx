@@ -1,5 +1,5 @@
-import fblogo from "/images/FBLOGO.png";
 import iglogo from "/images/IG.jpg";
+import fblogo from "/images/FBLOGO.png";
 
 const AppFooter = () => {
     return ( 
