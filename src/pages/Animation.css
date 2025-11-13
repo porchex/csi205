@@ -9,7 +9,7 @@
 .anim-field {
   border: 1px solid black;
   border-radius: 1rem;
-  background-image: url("./images/field.png");
+  /* background-image: url("./images/field.png"); */
   /* background-size: contain; */
   /* background-repeat: no-repeat; */
   width: 700px;

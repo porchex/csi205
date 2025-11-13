@@ -1,4 +1,7 @@
 import { Outlet } from "react-router-dom";
+import human from "/images/human.png";
+import logo from "/images/logo.png";
+
 
 const Home = () => {
   return (
@@ -11,7 +14,7 @@ const Home = () => {
         marginTop: "20px" 
       }}>
         <img
-          src="images/human.png"
+          src={human}
           alt="student"
           style={{ borderRadius: "0%", width: "300px", height: "300px" }}
         />
