@@ -31,7 +31,7 @@ function AppNavbar({ products, carts, setToken }) {
   }, [menu]);
 
   return (
-    <div className="d-flex justify-content-center gap-2">
+   <div className="d-flex justify-content-center gap-2">
       <Link to={"/home"}>
         <Button
           variant={menu === "home" ? "secondary" : "outline-secondary"}
