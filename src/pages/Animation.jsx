@@ -59,7 +59,7 @@ export default function App() {
       backgroundImage: `url(${images[cur]})`,
     });
   };
-
+        //  ------------------------------
   const step = () => {
     setX((prevX) => {
       let nextX = prevX + (goRight.current ? vx.current : -vx.current);
@@ -90,7 +90,7 @@ export default function App() {
     backgroundSize: "cover",
     position: "relative",
     borderRadius: "15px",
-    boxShadow: "0 0 10px rgba(0,0,0,0.2)" ,
+    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
     overflow: "hidden",
   };
 
