@@ -7,6 +7,7 @@ import logo from "/images/logo.png";
 import football from "/images/football.png";
 import human from "/images/human.png";
 import volleyball from "/images/volleyball.png";
+import field from "/images/field.png";
 
 export default function App() {
   const fieldWidth = 650;
@@ -84,6 +85,13 @@ export default function App() {
   const fieldStyle = {
     width: `${fieldWidth}px`,
     height: `${fieldHeight}px`,
+    backgroundImage: `url(${field})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    position: "relative",
+    borderRadius: "15px",
+    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
   };
 
   const ballStyle = {
@@ -100,18 +108,31 @@ export default function App() {
   };
 
   return (
-    <div className="anim-container">
-      <div id="field" className="anim-field" style={fieldStyle}>
+    <div className="anim-container text-center">
+      <img
+        src={logo}
+        alt="Logo"
+        style={{
+          width: "120px",
+          marginBottom: "1rem",
+          borderRadius: "12px",
+          boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+        }}
+      />
+
+      <div id="field" className="anim-field mx-auto" style={fieldStyle}>
         <div id="ball" className="anim-ball" style={ballStyle} />
       </div>
 
-      <div className="anim-control d-flex justify-content-between">
+      
+      <div className="anim-control d-flex justify-content-between mt-3">
         <button
           id="run"
           className={`btn ${running ? "btn-warning" : "btn-success"}`}
           onClick={runClicked}
         >
-          <i className={`bi ${running ? "bi-pause" : "bi-play"}`} />&nbsp;
+          <i className={`bi ${running ? "bi-pause" : "bi-play"}`} />
+          &nbsp;
           {running ? "PAUSE" : "RUN"}
         </button>
 
