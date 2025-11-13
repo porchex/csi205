@@ -1,0 +1,45 @@
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import "./Products.css";
+
+function Products({ products, carts, setCarts }) {
+  return (
+    <div className="products-container">
+      <div className="products-itemps-container">
+        {products.map((product) => (
+          <Card style={{ width: "18rem" }} key={product.id}>
+            <Card.Img
+              variant="top"
+              src={product.thumbnailUrl}
+              style={{ width: '150px', height: '150px', objectFit: 'cover', margin: '1rem auto 0' }}
+            //   alt={product.title}
+            />
+            <Card.Body>
+              <Card.Title>{product.title}</Card.Title>
+              <Card.Text>
+                <b>$</b>
+                {product.price.toFixed(2)}
+              </Card.Text>
+
+              {carts.find((cart) => cart.id === product.id) ? (
+                <span className="badge bg-danger">Added</span>
+              ) : (
+                <Button
+                  variant="outline-primary"
+                  on
+                  onClick={() => {
+                    setCarts([...carts, product]);
+                  }}
+                >
+                  Add to Cart
+                </Button>
+              )}
+            </Card.Body>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Products;
