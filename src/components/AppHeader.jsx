@@ -1,10 +1,11 @@
 import "./AddHeader.css"
+import logo from "/images/logo.png";
 const AppHeader = () => {
 
     return ( 
         <>
             <div>
-                <img src="images/logo.png" className="AppHeader" />
+                <img src={logo} className="AppHeader" />
             </div>
 
 
