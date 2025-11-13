@@ -83,16 +83,17 @@ export default function App() {
   }, [running]);
 
   const fieldStyle = {
-    width: `${fieldWidth}px`,
-    height: `${fieldHeight}px`,
-    backgroundImage: `url(${field})`,
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    position: "relative",
-    borderRadius: "15px",
-    boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-  };
+  width: `${fieldWidth}px`,
+  height: `${fieldHeight}px`,
+  backgroundImage: `url(${field})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  position: "relative",
+  borderRadius: "15px",
+  boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+  overflow: "hidden", 
+};
 
   const ballStyle = {
     width: `${ballDiameter}px`,
